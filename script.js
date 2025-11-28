@@ -11,9 +11,10 @@ function convertDotsToUnderscore(text){
     text = text.trim();
 
     if(text.includes('.')){
-        return text.split('.').map(octet => octet.trim().padStart(3, '0')).join('_');
+        const converted = text.split('.').map(octet => octet.trim().padStart(3, '0')).join('_');
+        return converted + '/WEB1';
     } else {
-        return text.padStart(3, '0');
+        return text.padStart(3, '0') + '/WEB1';
     }
 }
 
@@ -37,7 +38,7 @@ function computeAndShow(){
         ul.appendChild(li);
     });
 
-    result.innerHTML = '';
+    result.innerHTML = ' ';
     result.appendChild(ul);
 }
 
