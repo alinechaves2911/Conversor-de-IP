@@ -18,7 +18,6 @@ function convertDotsToUnderscore(text){
     }
 }
 
-
 function computeAndShow(){
     const raw = ip.value.trim() !== "" ? ip.value : ips.value;
     if(!raw || raw.trim() === ""){
@@ -38,7 +37,7 @@ function computeAndShow(){
         ul.appendChild(li);
     });
 
-    result.innerHTML = ' ';
+    result.innerHTML = '';
     result.appendChild(ul);
 }
 
